@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+
+.header {
+    background: aqua;
+    color: aliceblue;
+}
