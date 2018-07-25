@@ -5,7 +5,9 @@ import ReactDOM from 'react-dom';
 import Header from './components/header';
 import Profile from './components/single_page';
 import Footer from './components/footer';
-import InputLine from './components/inputLine'
+import InputLine from './components/inputLine';
+import PagesList from './components/pages_list'
+
 
 import './style.css';
 
@@ -16,6 +18,7 @@ const MyMessage = () => {
             <Profile/>
             <InputLine/>
             <Footer/>
+            <PagesList/>
         </div>
     )
 };

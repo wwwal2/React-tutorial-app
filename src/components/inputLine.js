@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import PagesList from './pages_list'
 
 
 class InputLine extends React.Component {
 
     state = {
-      functionalValue: 'Search'
+      functionalValue: ''
     };
 
     dataFromInput = (a) => {
         console.log(a.target.value);
+        this.setState({functionalValue: a.target.value});
     };
 
     render(){
@@ -16,9 +18,10 @@ class InputLine extends React.Component {
             <div className ='inputLine'>
                 <input
                     type="text"
-                    onChange={(insertedValue) => this.dataFromInput(insertedValue)}
+                    onChange={this.dataFromInput}
                 />
-                <div>{console.log(this.state.functionalValue)}</div>
+                <div>{this.state.functionalValue}</div>
+                <PagesList passing={this.state.functionalValue}/>
             </div>
         )
     }
